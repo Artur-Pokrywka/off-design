@@ -1,15 +1,15 @@
 import React from "react"
+import PageHeader from "../components/page-header"
 
 import Layout from "../components/layout"
-import PageHeader from "../components/page-header"
 import SEO from "../components/seo"
 
-
-const IndexPage = () => ( 
+const Projects = () => (
   <Layout>
-    <SEO title="off desig-wnętrza " />
+    <SEO title="Home staging" />
     <PageHeader />
+  
   </Layout>
 )
 
-export default IndexPage
+export default Projects
