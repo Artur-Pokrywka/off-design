@@ -19,8 +19,9 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Roboto`,
-            subsets: [`latin-ext`] 
+            family: `Montserrat`,
+            subsets: [`latin-ext`],
+            variants: [`400`, `700`]
           },
         ],
       },

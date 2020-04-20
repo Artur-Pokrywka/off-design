@@ -1,18 +1,17 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import logo from "../images/logo.png" 
 import styled from "styled-components"
 
-
 const HeaderWrapper = styled.header`
-  background: #212121;
   height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 80vw;
-  margin: 0 auto;
+  margin-left: 35vw;
+  position: fixed;
+  z-index: 1;
 `;
 
 const MainNav = styled.nav`
@@ -22,31 +21,27 @@ const MainNav = styled.nav`
 `;
 
 const NavElement = styled.li`
-  margin: 0 2rem ;
+  margin: 0 2rem;
+  font-size: 1.4rem;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: #fff;
+  font-weight: 100;
   :hover {
     cursor: pointer;
-    color: #b59f7f;
-    transition: 0.3s ease;
+    color: #000;
+    transition: 0.4s ease;
   }
   :active {
-    color: #b59f7f;
+    color: #000;
   }
-`;
-
-const Logo = styled.img `
-  width: 10rem;
-  height: 4rem;
 `;
 
 const PageHeader = () => (
   <>
-    <HeaderWrapper>
-      <Logo src={logo} alt="logo"/>          
+    <HeaderWrapper>     
       <MainNav>
         <NavElement>
           <StyledLink to="/"> start</StyledLink>
@@ -55,7 +50,7 @@ const PageHeader = () => (
           <StyledLink to="/home-staging/"> home staging</StyledLink>
         </NavElement>
         <NavElement>
-          <StyledLink to="/projekty wnętrz/"> projekty wnętrz</StyledLink>
+          <StyledLink to="/projekty-wnetrz/"> projekty wnętrz</StyledLink>
         </NavElement>
         <NavElement>
           <StyledLink to="/kontakt/"> kontakt</StyledLink>

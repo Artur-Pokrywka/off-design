@@ -1,50 +1,58 @@
 import React from "react"
 import styled, {keyframes} from "styled-components"
 import intro from "../video/intro.mp4"
+import logo from "../images/logo.png" 
 
 
-const show = keyframes`
-        0% { opacity: 0; }
-        // 50% { opacity: 0.5; }
-        100% { opacity: 1; }
+const Logo = styled.img `
+  width: 30rem;
+  height: 7rem;
 `;
 
 const VideoWrapper = styled.video`
     width: 100%;
-    height: calc(100vh - 5rem);
     position: relative;
+`;
+
+const show = keyframes`
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 `;
 
 const ThemeWrapper = styled.div`
     width: 600px;
     height: 300px; 
-    border: 3px solid #000;
+    border: 3px solid #fff;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
     opacity: 0;
     animation-delay: 1000ms;
-    animation-duration: 1000ms;
+    animation-duration: 2000ms;
     animation-fill-mode: forwards;
     animation-name: ${show};
-
     top: 10rem;
-    margin: 0 auto;
+    left: 1rem;
 `;
 
 const MainTitle = styled.h1`    
-    font-size: 2rem;
-    color: #000;
+    font-size: 3rem;
 `;
 
+const Subtitle = styled.p `
+    color: #fff;
+    font-size: 1.2rem;
+    `;
 
 const Video = () => (
     <>
         <VideoWrapper src={intro} preload="auto" loop={true} autoPlay/>
-            <ThemeWrapper>
-                <MainTitle>off design-wnętrza</MainTitle> 
-            </ThemeWrapper> 
+        <ThemeWrapper>
+            <MainTitle> <Logo src={logo} alt="logo"/> </MainTitle> 
+            <Subtitle>odkryj magię swojej nieruchomości</Subtitle>
+        </ThemeWrapper> 
     </>
 );
 
