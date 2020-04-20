@@ -5,10 +5,10 @@ import styled from "styled-components"
 import "./reset.css"
 
 const MainWrapper = styled.section`
-  width: 80vw;
-  margin: 0 auto;
+  width: 100%;
   font-family: Roboto;
   color: #fff;
+  background: #212121; 
 `;
 
 const Layout = ({ children }) => (

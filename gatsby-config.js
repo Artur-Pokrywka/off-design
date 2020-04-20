@@ -20,7 +20,7 @@ module.exports = {
         fonts: [
           {
             family: `Roboto`,
-            subsets: [`latin`]
+            subsets: [`latin-ext`] 
           },
         ],
       },
