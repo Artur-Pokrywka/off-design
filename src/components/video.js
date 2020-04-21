@@ -1,12 +1,12 @@
 import React from "react"
 import styled, {keyframes} from "styled-components"
 import intro from "../video/intro.mp4"
-import logo from "../images/logo.png" 
+import logo from "../images/icon.png" 
 
 
 const Logo = styled.img `
-  width: 30rem;
-  height: 7rem;
+  width: 9rem;
+  height: 5rem;
 `;
 
 const VideoWrapper = styled.video`
@@ -38,19 +38,22 @@ const ThemeWrapper = styled.div`
 `;
 
 const MainTitle = styled.h1`    
-    font-size: 3rem;
+    font-size: 2.9rem;
+    letter-spacing: -2px
 `;
 
 const Subtitle = styled.p `
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 2.1rem;
+    letter-spacing: -1px;
+    margin-top: 0.5rem;
     `;
 
 const Video = () => (
     <>
         <VideoWrapper src={intro} preload="auto" loop={true} autoPlay/>
         <ThemeWrapper>
-            <MainTitle> <Logo src={logo} alt="logo"/> </MainTitle> 
+        <MainTitle>  <Logo src={logo} alt="logo"/> off design-wnętrza</MainTitle> 
             <Subtitle>odkryj magię swojej nieruchomości</Subtitle>
         </ThemeWrapper> 
     </>
