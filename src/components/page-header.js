@@ -1,25 +1,22 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, {useState} from "react"
 import styled from "styled-components"
+import theme from "../utils/theme"
 
-window.addEventListener('scroll', () => {
-  let x = window.scrollY;
-  if(x > 100 ) {
-    // HeaderWrapper.background = 'red'
-  };
-});
 
-const HeaderWrapper = styled.header`
-  height: 4rem;
+const HeaderWrapper = styled.div`
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 80vw;
   padding-left: 35vw;
   position: fixed;
+  top: 0;
   z-index: 1;
-  // background-color: ${({isBlack}) => isBlack ? '#000' : 'none'};
+  background: ${({isBlack}) => isBlack ? theme.colors.dark : 'none'};
+  background: ${({menuType}) => menuType="dark" ? theme.colors.dark : 'none'};
 `;
 
 const MainNav = styled.nav`
@@ -38,7 +35,7 @@ const StyledLink = styled(Link)`
   letter-spacing: -1px;
   :hover {
     cursor: pointer;
-    color: #000;
+    color: ${({theme}) => theme.colors.turquoise};
     transition: 0.4s ease;
   }
   :active {
@@ -46,8 +43,19 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const PageHeader = () => (
-    <HeaderWrapper>     
+const PageHeader = ({menuType}) => {
+  const [MenuBackground, setMenuBackground] = useState(false);
+  window.addEventListener('scroll', () => {
+    let x = window.scrollY;
+    if(x > 150 ) {
+      setMenuBackground(true);
+    } else {
+      setMenuBackground(false);
+    }
+  });
+
+  return (
+    <HeaderWrapper isBlack={ MenuBackground } menuType="default">     
       <MainNav>
         <NavElement>
           <StyledLink to="/"> start</StyledLink>
@@ -63,7 +71,7 @@ const PageHeader = () => (
         </NavElement>
       </MainNav>
     </HeaderWrapper>
-)
+)}
 
 PageHeader.propTypes = {
   siteTitle: PropTypes.string,

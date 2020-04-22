@@ -1,4 +1,5 @@
 import React from "react"
+
 import styled, {keyframes} from "styled-components"
 import intro from "../video/intro.mp4"
 import logo from "../images/icon.png" 
@@ -51,7 +52,7 @@ const Subtitle = styled.p `
 
 const Video = () => (
     <>
-        <VideoWrapper src={intro} preload="auto" loop={true} autoPlay/>
+        <VideoWrapper src={intro} preload="auto" loop={true} autoPlay muted/>
         <ThemeWrapper>
         <MainTitle>  <Logo src={logo} alt="logo"/> off design-wnętrza</MainTitle> 
             <Subtitle>odkryj magię swojej nieruchomości</Subtitle>
