@@ -9,6 +9,8 @@ import test4 from "../images/projekty/4.png"
 import test5 from "../images/projekty/5.png"
 import test6 from "../images/projekty/6.png"
 
+const name = "project name" 
+
 
 const GalleryWrapper = styled.div`
     display: flex;
@@ -19,12 +21,12 @@ const GalleryWrapper = styled.div`
 
 const Gallery = () => (
     <GalleryWrapper>
-        <Image  img={test1}/> 
-        <Image  img={test2}/> 
-        <Image  img={test3}/>   
-        <Image  img={test4}/> 
-        <Image  img={test5}/> 
-        <Image  img={test6}/> 
+        <Image  img={test1} caption={name}/> 
+        <Image  img={test2} caption={name}/> 
+        <Image  img={test3} caption={name}/>   
+        <Image  img={test4} caption={name}/> 
+        <Image  img={test5} caption={name}/> 
+        <Image  img={test6} caption={name}/> 
     </GalleryWrapper>
 );
 

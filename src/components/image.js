@@ -52,10 +52,10 @@ const ImageCaption = styled.a`
 `;
 
 
-const Image = ({img}) => (
+const Image = ({img, caption}) => (
     <ImageWrapper>
         <ImageElement src={img} /> 
-        <ImageCaption>asfasdfasdf</ImageCaption>
+        <ImageCaption>{caption}</ImageCaption>
     </ImageWrapper>
 );
  

@@ -15,8 +15,7 @@ const HeaderWrapper = styled.div`
   position: fixed;
   top: 0;
   z-index: 1;
-  background: ${({isBlack}) => isBlack ? theme.colors.dark : 'none'};
-  background: ${({menuType}) => menuType="dark" ? theme.colors.dark : 'none'};
+  background: ${({isBlack, menuType}) =>  menuType === 'default' ? ( isBlack ? 'black' : 'transparent') : 'black'};
 `;
 
 const MainNav = styled.nav`
@@ -43,7 +42,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const PageHeader = ({menuType}) => {
+const PageHeader = ({menuType = 'default'}) => {
   const [MenuBackground, setMenuBackground] = useState(false);
   window.addEventListener('scroll', () => {
     let x = window.scrollY;
@@ -55,7 +54,7 @@ const PageHeader = ({menuType}) => {
   });
 
   return (
-    <HeaderWrapper isBlack={ MenuBackground } menuType="default">     
+    <HeaderWrapper isBlack={ MenuBackground } menuType={ menuType }>     
       <MainNav>
         <NavElement>
           <StyledLink to="/"> start</StyledLink>

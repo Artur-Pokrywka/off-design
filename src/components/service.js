@@ -23,6 +23,7 @@ const Icon = styled.img`
 
 const ServiceCaption = styled.p`   
     width: 33%;
+    text-align: right;
 `;
 
 const ServiceDetail = styled.p`
