@@ -4,6 +4,7 @@ import React, {useState} from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
 
+const pageNames=["start", "home-staging", "projekty-wnętrz", "kontakt"]
 
 const HeaderWrapper = styled.div`
   height: 5rem;
@@ -15,7 +16,7 @@ const HeaderWrapper = styled.div`
   position: fixed;
   top: 0;
   z-index: 1;
-  background: ${({isBlack, menuType}) =>  menuType === 'default' ? ( isBlack ? 'black' : 'transparent') : 'black'};
+  background: ${({isDark, menuType}) =>  menuType === 'default' ? ( isDark ? theme.colors.dark : 'transparent') : theme.colors.dark};
 `;
 
 const MainNav = styled.nav`
@@ -38,7 +39,7 @@ const StyledLink = styled(Link)`
     transition: 0.4s ease;
   }
   :active {
-    color: #000;
+    color: ${({theme}) => theme.colors.turquoise}
   }
 `;
 
@@ -54,20 +55,14 @@ const PageHeader = ({menuType = 'default'}) => {
   });
 
   return (
-    <HeaderWrapper isBlack={ MenuBackground } menuType={ menuType }>     
+    <HeaderWrapper isDark={ MenuBackground } menuType={ menuType }>     
       <MainNav>
-        <NavElement>
-          <StyledLink to="/"> start</StyledLink>
-        </NavElement>
-        <NavElement>
-          <StyledLink to="/home-staging/"> home staging</StyledLink>
-        </NavElement>
-        <NavElement>
-          <StyledLink to="/projekty-wnetrz/"> projekty wnętrz</StyledLink>
-        </NavElement>
-        <NavElement>
-          <StyledLink to="/kontakt/"> kontakt</StyledLink>
-        </NavElement>
+        {
+          pageNames.map( name => 
+            <NavElement key={name}>   
+              <StyledLink to={name} partiallyActive={true} activeStyle={{color: theme.colors.turquoise}}>{name=name.replace("-"," ")}</StyledLink>
+            </NavElement>) 
+        }
       </MainNav>
     </HeaderWrapper>
 )}
@@ -77,7 +72,7 @@ PageHeader.propTypes = {
 }
 
 PageHeader.defaultProps = {
-  siteTitle: `off desing-wnętrza`,
+  siteTitle: 'off desing-wnętrza',
 }
 
 

@@ -2,15 +2,15 @@ import React from "react"
 import styled from "styled-components"
 import Image from "../components/image"
 
-import test1 from "../images/projekty/1.png"
-import test2 from "../images/projekty/2.png"
-import test3 from "../images/projekty/3.png"
-import test4 from "../images/projekty/4.png"
-import test5 from "../images/projekty/5.png"
-import test6 from "../images/projekty/6.png"
+import test1 from "../images/home-staging/1.png"
+import test2 from "../images/home-staging/2.png"
+import test3 from "../images/home-staging/3.png"
+import test4 from "../images/home-staging/4.png"
+import test5 from "../images/home-staging/5.png"
+import test6 from "../images/home-staging/6.png"
 
-const name = "project name" 
 
+const name = "project name"; 
 
 const GalleryWrapper = styled.div`
     display: flex;

@@ -22,8 +22,8 @@ const MainWrapper = styled.div`
 `;
 
 const ServiceTitle = styled.h2`
-    margin-top: 5rem;
-    font-size: 2rem;
+    margin: 1rem 0 2rem 0;
+    font-size: 1.6rem;
     padding: 2rem 0;
 `;
 

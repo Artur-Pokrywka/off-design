@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const Conatct = () => (
   <Layout>
     <SEO title="Kontakt" />
-   <PageHeader />
+   <PageHeader menuType="dark" />
   
   </Layout>
 )
