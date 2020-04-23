@@ -4,7 +4,7 @@ import React, {useState} from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
 
-const pageNames=["start", "home-staging", "projekty-wnętrz", "kontakt"]
+
 
 const HeaderWrapper = styled.div`
   height: 5rem;
@@ -54,6 +54,8 @@ const PageHeader = ({menuType = 'default'}) => {
     }
   });
 
+  const pageNames=["start", "home-staging", "projekty-wnętrz", "kontakt"]
+  
   return (
     <HeaderWrapper isDark={ MenuBackground } menuType={ menuType }>     
       <MainNav>
