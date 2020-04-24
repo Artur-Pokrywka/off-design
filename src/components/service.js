@@ -8,7 +8,6 @@ const ServiceWrapper = styled.div`
 `;
 
 const IconWrapper = styled.div`
-    border: 1px solid #fff;
     border-radius: 50%;
     background: #fff;
     padding: 3rem;
@@ -18,7 +17,6 @@ const IconWrapper = styled.div`
 const Icon = styled.img`
     width: 10rem;
     height: 10rem;
-    background: #fff; 
 `;
 
 const ServiceCaption = styled.p`   
@@ -32,13 +30,13 @@ const ServiceDetail = styled.p`
 
 const FakeDiv = styled.div `
     border-right: 2px solid #fff;
-    height: 4rem;
+    height: ${({isTall}) => isTall === "tall" ? '4rem' : 0};
     width: 2rem;
     margin-right: 2rem;
 `;
 
 
-const Service = ({icon, caption, details}) => (
+const Service = ({icon, caption, details, isTall="tall" }) => (
     <>
         <ServiceWrapper>
             <ServiceCaption>{caption}</ServiceCaption>
@@ -47,7 +45,7 @@ const Service = ({icon, caption, details}) => (
             </IconWrapper>
             <ServiceDetail>{details}</ServiceDetail>
         </ServiceWrapper>
-        <FakeDiv></FakeDiv>
+        <FakeDiv isTall={isTall}> </FakeDiv>
     </>
 );
 

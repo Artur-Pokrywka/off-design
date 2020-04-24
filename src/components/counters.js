@@ -5,17 +5,17 @@ import background from "../images/counters-background.jpg"
 
 const countedObjects = [
     {
-    caption: "lorem Ipsum",
+    caption: "Lorem ipsum",
     number: 122,
     counter: 0
     },
     {
-    caption: "lorem Ipsum",
+    caption: "Lorem ipsum",
     number: 12,
     counter: 0
     },
     {
-    caption: "lorem Ipsum",
+    caption: "Lorem ipsum",
     number: 76,
     counter: 0
     }
@@ -48,13 +48,11 @@ const CounterCaption = styled.p `
     font-size: 2rem;
 `;
 
-
-const  Counter2 = ({start, finish, scrollPosition}) => {
+const CounterElement = ({start, finish, scrollPosition}) => {
     const [counter, setCounter] = useState(start);
     const [isRuning, setIsRuning] = useState(false);
 
     window.addEventListener('scroll', () => {
-
         if(window.scrollY > scrollPosition && isRuning === false ) {
             setIsRuning(true);
         } 
@@ -62,34 +60,32 @@ const  Counter2 = ({start, finish, scrollPosition}) => {
 
     useEffect(() => {
         if(isRuning) {
-            console.log('jest uruchomiony!')
             const id = setInterval(() => {
                 setCounter(prev => {
                     const newValue = prev + 1;
                     if(newValue >= finish) {
                         clearInterval(id);
                     }
-                    return  newValue;
-                }
-                )
-            }, 1000)
+                    return newValue;
+                })
+            }, finish/600)
         }
-    }, [isRuning]);
+    }, [finish, isRuning]);
 
-return <div>{counter} ??</div>
+    return <CounterValue> {counter} </CounterValue>
 }
 
 const Counters = () => {
-    
-
     return (
         <CountersWrapper>
             {
-            countedObjects.map((obj,index) =>
-                <Counter key={obj.number}> 
-                   <Counter2 start={0} finish={obj.number} scrollPosition={700}/>
-                    <CounterCaption>{obj.caption} </CounterCaption>
-                </Counter>)
+            countedObjects.map((obj ) =>
+                {
+                    return <Counter key={obj.number}>
+                        <CounterElement start={0} finish={obj.number} scrollPosition={720} />
+                        <CounterCaption>{obj.caption} </CounterCaption>
+                    </Counter>;
+                })
             }
         </CountersWrapper>
     )

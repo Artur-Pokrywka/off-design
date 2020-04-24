@@ -9,10 +9,38 @@ import representation from "../images/icons/representation.png"
 import loan from "../images/icons/loan.png"
 import sold from "../images/icons/sold.png"
 
-
-const text = 'nasze kompleksowe usługi:';
-const description = 'Analiza nieruchomości. Oglądamy, oceniamy, sprawdzamy, a następnie szacujemy wstępną wartość nieruchomości.'; 
-const details = 'some more details'
+const servicesList = [
+    {
+        link: house,
+        description: 'Analiza nieruchomości. Oglądamy, oceniamy, sprawdzamy, a następnie szacujemy wstępną wartość nieruchomości.',
+        details:'some more details' 
+    },
+    {
+        link: sell,
+        description: 'Analiza nieruchomości. Oglądamy, oceniamy, sprawdzamy, a następnie szacujemy wstępną wartość nieruchomości.',
+        details:'some more details' 
+    },
+    {
+        link: cleaning,
+        description: 'Analiza nieruchomości. Oglądamy, oceniamy, sprawdzamy, a następnie szacujemy wstępną wartość nieruchomości.',
+        details:'some more details' 
+    },
+    {
+        link: representation,
+        description: 'Analiza nieruchomości. Oglądamy, oceniamy, sprawdzamy, a następnie szacujemy wstępną wartość nieruchomości.',
+        details:'some more details' 
+    },
+    {
+        link: loan,
+        description: 'Analiza nieruchomości. Oglądamy, oceniamy, sprawdzamy, a następnie szacujemy wstępną wartość nieruchomości.',
+        details:'some more details' 
+    },
+    {
+        link: sold,
+        description: 'Analiza nieruchomości. Oglądamy, oceniamy, sprawdzamy, a następnie szacujemy wstępną wartość nieruchomości.',
+        details:'some more details' 
+    }
+];
 
 const MainWrapper = styled.div`
     display: flex;
@@ -28,16 +56,13 @@ const ServiceTitle = styled.h2`
 `;
 
 
-const Services = () => (
+const Services = ({text}) => (
     <MainWrapper>
     <ServiceTitle>{text}</ServiceTitle>
-        <Service icon={house} caption={description} details={details}/>
-        <Service icon={sell} caption={description} details={details}/>
-        <Service icon={cleaning} caption={description} details={details}/>
-        <Service icon={representation} caption={description} details={details}/>
-        <Service icon={loan} caption={description} details={details}/>
-        <Service icon={sold} caption={description} details={details}/>
-    </MainWrapper>    
+        {
+            servicesList.map( (service) =>  <Service key={service.link} icon={service.link} caption={service.description} details={service.details} />)
+        }
+    </MainWrapper>
 );
 
 export default Services

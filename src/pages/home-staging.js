@@ -11,8 +11,8 @@ const HomeStaging = () => (
   <Layout>
     <SEO title="Home staging" />
     <PageHeader menuType="dark"/>
-    <PageTitle text={"home staging"}></PageTitle>
-    <Services />
+    <PageTitle title={"home staging"}></PageTitle>
+    <Services text='nasze kompleksowe usługi:'/>
     <Gallery />
   </Layout>
 )

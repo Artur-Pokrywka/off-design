@@ -5,13 +5,15 @@ import Layout from "../layout/layout"
 import SEO from "../components/seo"
 import PageTitle from "../components/page-title"
 import Gallery from "../components/gallery"
+import Services from "../components/services"
 
 
 const Projects = () => (
   <Layout>
     <SEO title="Projekty wnętrz" />
     <PageHeader menuType="dark" />
-    <PageTitle text= {"projekty wnętrz"}></PageTitle>
+    <PageTitle title= {"projekty wnętrz"}></PageTitle>
+    <Services text="proces projektowy:"/>
     <Gallery />
   </Layout>
 )

@@ -5,7 +5,6 @@ import styled from "styled-components"
 import theme from "../utils/theme"
 
 
-
 const HeaderWrapper = styled.div`
   height: 5rem;
   display: flex;
@@ -54,20 +53,38 @@ const PageHeader = ({menuType = 'default'}) => {
     }
   });
 
-  const pageNames=["start", "home-staging", "projekty-wnętrz", "kontakt"]
+  const pageNames = [
+    {
+      name: "start",
+      link: "/"
+    },
+    {
+      name: "home staging",
+      link: "home-staging"
+    },
+    {
+      name: "projekty wnętrz",
+      link: "projekty-wnętrz"
+    },
+    {
+      name: "kontakt",
+      link: "kontakt"
+    } 
+  ]
   
   return (
     <HeaderWrapper isDark={ MenuBackground } menuType={ menuType }>     
       <MainNav>
         {
-          pageNames.map( name => 
-            <NavElement key={name}>   
-              <StyledLink to={name} partiallyActive={true} activeStyle={{color: theme.colors.turquoise}}>{name=name.replace("-"," ")}</StyledLink>
+          pageNames.map( page => 
+            <NavElement key={page.name}>   
+              <StyledLink to={page.link} activeClassName={"true"} activeStyle={{color: theme.colors.turquoise}}> {page.name} </StyledLink>
             </NavElement>) 
         }
       </MainNav>
     </HeaderWrapper>
-)}
+  )
+}
 
 PageHeader.propTypes = {
   siteTitle: PropTypes.string,

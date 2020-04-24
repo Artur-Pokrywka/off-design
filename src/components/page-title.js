@@ -10,8 +10,8 @@ const Title = styled.h1`
     height: 2rem;
 `;
 
-const PageTitle = ({text}) => (
-    <Title>{text} </Title>
+const PageTitle = ({title}) => (
+    <Title>{title} </Title>
 );
 
 

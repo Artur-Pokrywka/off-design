@@ -2,7 +2,7 @@ import React from "react"
 
 import styled, {keyframes} from "styled-components"
 import intro from "../video/intro.mp4"
-import logo from "../images/icon.png" 
+import logo from "../images/icons/logo.png" 
 
 
 const Logo = styled.img `
