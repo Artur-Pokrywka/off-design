@@ -46,7 +46,7 @@ const GalleryWrapper = styled.div`
 const GallerySeparator = styled.hr`
     width: 80%;
     color: #fff;
-    margin-bottom: 4rem; 
+    margin: 4rem auto; 
     border-top: 2px solid #fff;
 `;
 
@@ -56,6 +56,7 @@ const Gallery = () => (
         {
             projects.map(project =>  <Image key={project.link} img={project.link} caption={project.name} is/>)
         }
+         <GallerySeparator />
     </GalleryWrapper>
 );
 

@@ -6,6 +6,8 @@ import SEO from "../components/seo"
 import Video from "../components/video"
 import Counters from "../components/counters"
 import About from "../components/about"
+import Footer from "../components/footer"
+
 
 
 const IndexPage = () => ( 
@@ -15,6 +17,7 @@ const IndexPage = () => (
     <Video />
     <About />
     <Counters />
+    <Footer />
   </Layout>
 )
 

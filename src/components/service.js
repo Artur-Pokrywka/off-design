@@ -10,13 +10,13 @@ const ServiceWrapper = styled.div`
 const IconWrapper = styled.div`
     border-radius: 50%;
     background: #fff;
-    padding: 3rem;
+    padding: 1.2rem;
     margin: 0 2rem;
 `;
 
 const Icon = styled.img`
-    width: 10rem;
-    height: 10rem;
+    width: 5rem;
+    height: 5rem;
 `;
 
 const ServiceCaption = styled.p`   
@@ -30,7 +30,7 @@ const ServiceDetail = styled.p`
 
 const FakeDiv = styled.div `
     border-right: 2px solid #fff;
-    height: ${({isTall}) => isTall === "tall" ? '4rem' : 0};
+    height: ${({isTall}) => isTall === "tall" ? '6rem' : 0};
     width: 2rem;
     margin-right: 2rem;
 `;

@@ -60,9 +60,11 @@ const Services = ({text}) => (
     <MainWrapper>
     <ServiceTitle>{text}</ServiceTitle>
         {
-            servicesList.map( (service) =>  <Service key={service.link} icon={service.link} caption={service.description} details={service.details} />)
+            servicesList.map(service =>  
+                <Service key={service.link} icon={service.link} caption={service.description} details={service.details} />)
         }
     </MainWrapper>
+    
 );
 
 export default Services

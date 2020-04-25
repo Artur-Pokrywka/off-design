@@ -28,6 +28,7 @@ const CountersWrapper = styled.div`
     flex-wrap: wrap;
     background: url(${background});
     background-position-y: 270rem;
+    margin-bottom: 3rem;
 `;
 
 const Counter = styled.div`

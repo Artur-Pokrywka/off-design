@@ -10,6 +10,7 @@ const MainWrapper = styled.section`
   font-family: Montserrat;
   color: #fff;
   background: ${({theme}) => theme.colors.dark}; 
+  min-height: calc(100vh- 4rem);
 `;
 
 const Layout = ({ children }) => (
