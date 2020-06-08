@@ -16,7 +16,7 @@ const IndexPage = () => (
     <PageHeader />
     <Video />
     <About />
-    <Counters />
+    <Counters /> 
     <Footer />
   </Layout>
 )
