@@ -1,9 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import styled from "styled-components"
 import theme from "../utils/theme"
-
 
 const HeaderWrapper = styled.div`
   height: 5rem;
@@ -44,15 +43,17 @@ const StyledLink = styled(Link)`
 
 const PageHeader = ({menuType = 'default'}) => {
   const [MenuBackground, setMenuBackground] = useState(false);
-  window.addEventListener('scroll', () => {
-    let x = window.scrollY;
-    if(x > 150 ) {
-      setMenuBackground(true);
-    } else {
-      setMenuBackground(false);
-    }
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      let x = window.scrollY;
+      if(x > 140 ) {
+        setMenuBackground(true);
+      } else {
+        setMenuBackground(false);
+      }
+    });
   });
-
+  
   const pageNames = [
     {
       name: "start",

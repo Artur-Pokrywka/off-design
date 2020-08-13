@@ -32,7 +32,7 @@ const CountersWrapper = styled.div`
 `;
 
 const Counter = styled.div`
-    height: 20rem; 
+    height: 20rem;
     margin: 2rem 0;
     display: flex;
     justify-content: center;
@@ -53,12 +53,14 @@ const CounterElement = ({start, finish, scrollPosition}) => {
     const [counter, setCounter] = useState(start);
     const [isRuning, setIsRuning] = useState(false);
 
-    window.addEventListener('scroll', () => {
-        if(window.scrollY > scrollPosition && isRuning === false ) {
-            setIsRuning(true);
-        } 
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > scrollPosition && isRuning === false ) {
+                setIsRuning(true);
+            }
+        });
     });
-
+    
     useEffect(() => {
         if(isRuning) {
             const id = setInterval(() => {

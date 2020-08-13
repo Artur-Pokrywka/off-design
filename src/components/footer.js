@@ -7,7 +7,7 @@ const FooterWrapper = styled.div`
     heigth: 2rem; 
     width: 80%;
     margin: 0 auto; 
-    padding-bottom: 2rem;
+    padding-bottom: 2rem; 
 `;
 
 const Logo = styled.img `
@@ -31,7 +31,7 @@ const Separator = styled.hr`
 const Footer = () => (
     <>
         <Separator />
-        <FooterWrapper>         
+        <FooterWrapper>
             <Logo src={logo} alt="logo" />
             <FooterText> 2020 <span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> off design-wnętrza. all rights reserved</FooterText>
         </FooterWrapper>
