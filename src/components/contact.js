@@ -8,11 +8,11 @@ import office from "../images/icons/home-run.png"
 const contactItems = [
         {
             name: phone,
-            value: "234 456 767"
+            value: "507 752 472"
         },
         {
             name: mail,
-            value:" loremipsum@gmail.com"
+            value: "marcelina.offdesign@gmail.com"
         },
         {
             name: office,

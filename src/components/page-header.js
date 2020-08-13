@@ -33,11 +33,11 @@ const StyledLink = styled(Link)`
   letter-spacing: -1px;
   :hover {
     cursor: pointer;
-    color: ${({theme}) => theme.colors.turquoise};
+    color: ${theme.colors.turquoise};
     transition: 0.4s ease;
   }
   :active {
-    color: ${({theme}) => theme.colors.turquoise}
+    color: ${theme.colors.turquoise};
   }
 `;
 

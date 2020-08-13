@@ -5,7 +5,6 @@ import Layout from "../layout/layout"
 import SEO from "../components/seo"
 import PageTitle from "../components/page-title"
 import Contact from "../components/contact"
-import Footer from "../components/footer"
 
 const Conatct = () => (
   <Layout>
@@ -13,7 +12,6 @@ const Conatct = () => (
    <PageHeader menuType="dark" />
    <PageTitle title= {"kontakt"}></PageTitle>
    <Contact />
-   <Footer />
   </Layout>
 )
 

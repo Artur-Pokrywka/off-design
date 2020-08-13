@@ -7,7 +7,6 @@ import PageTitle from "../components/page-title"
 import Gallery from "../components/gallery"
 import Services from "../components/services"
 import Prices from "../components/hs-pirices"
-import Footer from "../components/footer"
 
 const Projects = () => (
   <Layout>
@@ -17,7 +16,6 @@ const Projects = () => (
     <Services text="nasze kompleksowe usługi:"/>
     <Gallery />
     <Prices />
-    <Footer />
   </Layout>
 )
 
