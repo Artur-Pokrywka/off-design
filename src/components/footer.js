@@ -31,8 +31,7 @@ const Separator = styled.hr`
 const Footer = () => (
     <>
         <Separator />
-        <FooterWrapper>
-            
+        <FooterWrapper>         
             <Logo src={logo} alt="logo" />
             <FooterText> 2020 <span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> off design-wnętrza. all rights reserved</FooterText>
         </FooterWrapper>
